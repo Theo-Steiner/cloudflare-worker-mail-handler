@@ -1,0 +1,7 @@
+name = "mail-handler"
+type = "javascript"
+
+account_id = "c2e4bcc2d1e6af768d4f53906cac8731"
+workers_dev = true
+route = ""
+zone_id = ""
