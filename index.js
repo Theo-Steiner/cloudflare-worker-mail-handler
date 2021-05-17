@@ -32,6 +32,7 @@ async function handleRequest(request) {
 }
 
 async function sendEmail(userEmail, recipient, message, token) {
+  if (recipientName == 'moritz@mortimerbaltus.com' || 'theo@mortimerbaltus.com') {
   recipientName = recipient.split("@")[0];
   emailRequest = await fetch(
     "https://graph.microsoft.com/v1.0/users/contact@mortimerbaltus.com/sendMail",
@@ -78,7 +79,9 @@ async function sendEmail(userEmail, recipient, message, token) {
     }
     return res;
   });
-  return emailRequest;
+  return emailRequest;} else {
+    throw new Error(`You have no permission to send an email to this repicient!`)
+  }
 }
 
 async function getToken() {
