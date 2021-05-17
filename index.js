@@ -32,7 +32,7 @@ async function handleRequest(request) {
 }
 
 async function sendEmail(userEmail, recipient, message, token) {
-  if (recipientName == 'moritz@mortimerbaltus.com' || 'theo@mortimerbaltus.com') {
+  if (recipient === 'moritz@mortimerbaltus.com' || recipient === 'theo@mortimerbaltus.com') {
   recipientName = recipient.split("@")[0];
   emailRequest = await fetch(
     "https://graph.microsoft.com/v1.0/users/contact@mortimerbaltus.com/sendMail",
